@@ -33,22 +33,22 @@ public class EsdemoApplicationTests {
 	public void contextLoads() {
 
 		for(int i=1; i<=100; i++){
-			Book book = new Book(Long.valueOf(i), "亚马逊"+i, "wudi"+i, "这是一本测试书记"+i, (10+i));
+			Book book = new Book(Long.valueOf(i), "中华人民共和国国徽"+i, "wudi"+i, "刘德华"+i, (10+i));
 			bookService.add(book);
 			System.out.println("book = " + book);
 		}
 	}
-
-@Test
-	public  void contextTest(){
-		System.out.println("--ElasticSearch-->");
-		Client client = es.getClient();
-		Map<String, String> asMap = client.settings().getAsMap();
-		asMap.forEach((k, v) -> {
-			System.out.println(k + " = " + v);
-		});
-		System.out.println("<--ElasticSearch--");
-	}
+//
+//@Test
+//	public  void contextTest(){
+//		System.out.println("--ElasticSearch-->");
+//		Client client = es.getClient();
+//		Map<String, String> asMap = client.settings().getAsMap();
+//		asMap.forEach((k, v) -> {
+//			System.out.println(k + " = " + v);
+//		});
+//		System.out.println("<--ElasticSearch--");
+//	}
 
 
 	//查询所有

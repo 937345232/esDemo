@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
  * @Description
  * @Date: 2018-09-17 11:03
  */
-@Repository
+
 public interface  BookRepository extends ElasticsearchRepository<Book,Long> {
 
 }

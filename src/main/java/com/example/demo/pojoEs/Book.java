@@ -2,7 +2,8 @@ package com.example.demo.pojoEs;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
-import org.springframework.data.elasticsearch.annotations.FieldIndex;
+//import org.springframework.data.elasticsearch.annotations.Field;
+//import org.springframework.data.elasticsearch.annotations.FieldIndex;
 
 
 import java.io.Serializable;
@@ -17,13 +18,13 @@ public class Book implements Serializable {
 
     @Id
     private Long id;
-
+    @Field(analyzer="ik" ,store=true,searchAnalyzer="ik")
     private String title;
 
-    @Field(index = FieldIndex.analyzed,analyzer="ik" ,store=true,searchAnalyzer="ik")
+    @Field(analyzer="ik" ,store=true,searchAnalyzer="ik")
     private String author;
 
-    @Field(index = FieldIndex.analyzed,analyzer="ik" ,store=true,searchAnalyzer="ik")
+    @Field(analyzer="ik" ,store=true,searchAnalyzer="ik")
     private String desc;
 
     private int price;
